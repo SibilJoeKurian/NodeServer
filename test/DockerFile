@@ -1,0 +1,6 @@
+FROM node
+WORKDIR test
+COPY package.json package.json
+COPY server.test.js server.test.js
+RUN npm install
+CMD ["npm","test"]
